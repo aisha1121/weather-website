@@ -9,6 +9,7 @@ const pathname = path.join(__dirname,'../public')
 const viewsPath = path.join(__dirname,'../template/views')               //for customising views directory
 const partialpath = path.join(__dirname,'../template/partials')
  const app = express()
+ const port = process.env.PORT || 3000
 
  app.set('view engine', 'hbs')   // we set the template we want to use
  app.set('views',viewsPath)
@@ -102,6 +103,6 @@ app.get('/help/*', (req,res) => {
 
 
 
- app.listen(3000, () => {
-     console.log('server is on!')
+ app.listen(port, () => {
+     console.log('server is up on port '+port)
  })
