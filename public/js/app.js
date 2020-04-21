@@ -6,7 +6,7 @@ const message2 = document.querySelector('#p2')
 
 weatherform.addEventListener('submit' , (e) => {
     e.preventDefault()
-    message1.textContent = 'Loading'
+    message1.textContent = 'Loading...'
     message2.textContent = ''
     const location1 = search.value
     fetch('/weather?address='+encodeURIComponent(location1)).then((response) => {
